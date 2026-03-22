@@ -1,0 +1,61 @@
+{
+    "layer": "top",
+    "output": "DP-2",
+    "position": "top",
+    "height": 24,
+    "width": 11,
+    "modules-left": ["hyprland/workspaces", "custom/wallpaper"],
+
+    "custom/wallpaper": {
+        "format": "󰸉",
+        "on-click": "$HOME/.config/waybar/random_wallpaper.sh",
+        "tooltip": false
+    },
+
+    "modules-center": ["mpd"],
+    "modules-right": ["clock", "pulseaudio/slider", "custom/updates"],
+    "reload_style_on_change": true,
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {artist} - {title}",
+        "format-disconnected": "󰝛 Disconnected",
+        "format-stopped": "󰓛 THEPROPHAT",
+        "state-icons": {
+            "paused": "󰏤",
+            "playing": "󰐊"
+        },
+        "on-click": "mpc toggle",
+        "interval": 2
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+},
+"pulseaudio/slider": {
+
+
+    "min": 0,
+
+
+    "max": 100,
+
+
+    "orientation": "vertical"
+
+},
+"custom/updates": {
+    "format": "󰚰 {}",
+    "interval": 3600,                     // Check every hour
+    "exec": "checkupdates | wc -l",       // For Arch; use your distro's check command
+    "exec-if": "exit 0",                  // Only runs if network is up (optional)
+    "on-click": "kitty -e sudo pacman -Syu", // Open terminal to update
+    "signal": 8
+}
+
+

@@ -1,0 +1,67 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    font-family: "VCR OSD MONO", monospace;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: transparent;
+    border-radius: 8px;
+    border: none; /*this is not a real variable, but it removes the background for some reason. try to find a real fix.*/
+
+    border-bottom: 3px solid @color2;
+    color: @foreground;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: @color4;
+}
+
+#workspaces button.active {
+    color: @color1;
+    background-color: @color4; 
+}
+
+#clock, #mpd {
+    padding: 0 10px;
+}
+
+#mpd {
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+#custom-wallpaper {
+    color: @color2;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+#custom-wallpaper:hover {
+    background-color: @foreground;
+    border-radius: 8px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+#pulseaudio-slider trough {
+    min-height: 8px; 
+    min-width: 100px;
+    background-color: @background;
+}
+
+#pulseaudio-slider highlight {
+    min-height: 8px;
+    border-radius: 0px;
+    background-color: @foreground;
+}
