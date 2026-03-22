@@ -1,7 +1,7 @@
-🛠️ dotfiles
 
-My personal configuration files managed with GNU Stow.
-📂 Included Configs
+
+My personal configuration files managed with GNU Stow. 
+    Configs
 
     Terminal: kitty
 
@@ -13,7 +13,7 @@ My personal configuration files managed with GNU Stow.
 
     Music/Others: rmpc, streamrip, pywal
 
-🚀 Installation
+    Installation
 
 To set these up on a fresh system, follow these steps:
 1. Prerequisites
@@ -29,26 +29,26 @@ Ensure you have git and stow installed:
 2. Clone the Repository
 
 Clone this repo into a folder named dotfiles in your home directory:
-Bash
 
-git clone https://github.com/ThePropHat/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+
+	git clone https://github.com/ThePropHat/dotfiles.git ~/dotfiles
+	cd ~/dotfiles
 
 3. Deploy with Stow
 
 First, create the .config directory if it doesn't exist:
-Bash
 
-mkdir -p ~/.config
+
+	mkdir -p ~/.config
 
 Then, use Stow to symlink the configurations:
-Bash
 
-# To stow everything at once:
-stow *
 
-# Or stow specific packages:
-stow nvim kitty rofi
+	# To stow everything at once:
+	stow *
+
+	# Or stow specific packages:
+	stow nvim kitty rofi
 
 ⚠️ Notes
 
