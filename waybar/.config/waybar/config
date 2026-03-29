@@ -2,7 +2,7 @@
     "layer": "top",
     "output": "DP-2",
     "position": "top",
-    "height": 24,
+    "height": 34,
     "width": 11,
     "modules-left": ["hyprland/workspaces", "custom/wallpaper"],
 
@@ -13,7 +13,7 @@
     },
 
     "modules-center": ["mpd"],
-    "modules-right": ["clock", "pulseaudio/slider", "custom/updates"],
+    "modules-right": ["clock", "pulseaudio/slider"],
     "reload_style_on_change": true,
 
     "hyprland/workspaces": {
@@ -35,8 +35,8 @@
     "clock": {
         "format": "{:%a %d %b  %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    }
-},
+    },
+
 "pulseaudio/slider": {
 
 
@@ -46,16 +46,8 @@
     "max": 100,
 
 
-    "orientation": "vertical"
+    "orientation": "horizontal"
 
-},
-"custom/updates": {
-    "format": "󰚰 {}",
-    "interval": 3600,                     // Check every hour
-    "exec": "checkupdates | wc -l",       // For Arch; use your distro's check command
-    "exec-if": "exit 0",                  // Only runs if network is up (optional)
-    "on-click": "kitty -e sudo pacman -Syu", // Open terminal to update
-    "signal": 8
 }
 
-
+}

@@ -1,17 +1,15 @@
-@import "../../.cache/wal/colors-waybar.css";
+@import "/home/theprophat/.cache/wal/colors-waybar.css";
 
 * {
     border: none;
     font-family: "VCR OSD MONO", monospace;
     font-size: 15px;
+	text-shadow: 1px 1px 0px #000000
 }
 
 window#waybar {
     background-color: transparent;
     border-radius: 8px;
-    border: none; /*this is not a real variable, but it removes the background for some reason. try to find a real fix.*/
-
-    border-bottom: 3px solid @color2;
     color: @foreground;
 }
 
