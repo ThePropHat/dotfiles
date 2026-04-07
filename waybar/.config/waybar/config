@@ -4,7 +4,7 @@
     "position": "top",
     "height": 34,
     "width": 11,
-    "modules-left": ["hyprland/workspaces", "custom/wallpaper"],
+    "modules-left": ["hyprland/workspaces", "idle_inhibitor", "custom/wallpaper"],
 
     "custom/wallpaper": {
         "format": "󰸉",
@@ -48,6 +48,18 @@
 
     "orientation": "horizontal"
 
+},
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": true,
+        "tooltip-format-activated": "Stay Awake: ON",
+        "tooltip-format-deactivated": "Stay Awake: OFF"
+    }
 }
 
 }

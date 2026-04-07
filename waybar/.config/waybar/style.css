@@ -4,7 +4,7 @@
     border: none;
     font-family: "VCR OSD MONO", monospace;
     font-size: 15px;
-	text-shadow: 1px 1px 0px #000000
+    text-shadow: 1px 1px 0px #000000;
 }
 
 window#waybar {
@@ -20,10 +20,12 @@ window#waybar {
 
 #workspaces button.active {
     color: @color1;
-    background-color: @color4; 
+    background-color: @color4;
+    margin: 0 10px;
+    padding: 0 5px;
 }
 
-#clock, #mpd {
+#clock, #mpd, #custom-wallpaper, #idle_inhibitor {
     padding: 0 10px;
 }
 
@@ -32,34 +34,41 @@ window#waybar {
     transition: all 0.3s ease;
 }
 
-#custom-wallpaper {
-    color: @color2;
-    padding: 0 10px;
+#custom-wallpaper, #idle_inhibitor.activated {
+    color: @foreground;
     font-size: 18px;
 }
 
+#idle_inhibitor.deactivated {
+    color: @color2;
+}
+
+#idle_inhibitor:hover,
 #custom-wallpaper:hover {
     background-color: @foreground;
     border-radius: 8px;
 }
+
+/* Pulseaudio Slider Styling */
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
+    min-height: 0;
+    min-width: 0;
     opacity: 0;
     background-image: none;
-    border: none;
     box-shadow: none;
     margin: 0;
+	border-radius: 0;
 }
 
 #pulseaudio-slider trough {
     min-height: 8px; 
     min-width: 100px;
     background-color: @background;
+	border-radius: 0;
 }
 
 #pulseaudio-slider highlight {
     min-height: 8px;
-    border-radius: 0px;
     background-color: @foreground;
+	border-radius: 0;
 }
