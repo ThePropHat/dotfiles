@@ -1,5 +1,5 @@
 #!/bin/bash
-WALL_DIR="$HOME/Desktop/wallpapers"
+WALL_DIR="$HOME/bin/wallpapers"
 
 SELECTED_WALL=$(find "$WALL_DIR" -type f | shuf -n 1)
 
