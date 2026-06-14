@@ -6,6 +6,8 @@
     "width": 11,
     "modules-left": ["hyprland/workspaces", "idle_inhibitor", "custom/wallpaper"],
 
+
+
     "custom/wallpaper": {
         "format": "󰸉",
         "on-click": "$HOME/.config/waybar/random_wallpaper.sh",
@@ -13,11 +15,21 @@
     },
 
     "modules-center": ["mpd"],
-    "modules-right": ["clock", "pulseaudio/slider"],
+    "modules-right": ["clock", "custom/weather", "pulseaudio/slider"],
     "reload_style_on_change": true,
 
     "hyprland/workspaces": {
         "format": "{name}"
+    },
+
+
+
+	    "custom/weather": {
+        "format": "{}°C",
+        "tooltip": true,
+        "interval": 1800,
+        "exec": "curl -s 'wttr.in/?format=%t' | grep -oE '[0-9.-]+'",        
+        "exec-if": "ping wttr.in -c1"
     },
 
     "mpd": {

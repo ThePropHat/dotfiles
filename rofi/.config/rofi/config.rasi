@@ -180,4 +180,6 @@ configuration {
 */
 }
 
-@theme "/usr/share/rofi/themes/c64.rasi"
+//@theme "/usr/share/rofi/themes/c64.rasi"
+
+@theme "/home/theprophat/.local/share/rofi/themes/launchpad.rasi"
